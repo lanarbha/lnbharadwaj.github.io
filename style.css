@@ -68,9 +68,9 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 100px 10%;
-    background: linear-gradient(135deg, #1e2a47, #283b73);
-    color: white;
+    padding: 80px 10%;
+    background: white;
+    color: #222;
     flex-wrap: wrap;
 }
 
@@ -170,4 +170,15 @@ footer {
     padding: 30px;
     background: #111c34;
     color: white;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.profile-card p {
+    font-size: 14px;
+    line-height: 1.6;
 }
