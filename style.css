@@ -121,16 +121,16 @@ nav a:hover {
 
 .content-wrapper {
     display: flex;
-    gap: 90px;
-    max-width: 1100px;
-    margin: 80px auto;
+    justify-content: space-between;   /* pushes left & right apart */
+    gap: 80px;
+    width: 100%;
+    padding: 80px 8%;
     align-items: flex-start;
-    padding: 0 10%;
 }
 
 /* LEFT SIDE - WORKING PAPERS */
 .working-left {
-    flex: 1.3;
+    flex: 1.4;
 }
 
 .working-left h2 {
@@ -161,7 +161,9 @@ nav a:hover {
 
 /* RIGHT SIDE - EDUCATION */
 .education-right {
-    flex: 0.9;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;   /* pushes card to right edge */
 }
 
 .education-card {
