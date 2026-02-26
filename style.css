@@ -122,16 +122,16 @@ nav a:hover {
 .content-wrapper {
     display: flex;
     justify-content: space-between;
-    gap: 70px;
-    max-width: 1200px;     /* keeps layout centered */
-    margin: 80px auto;     /* centers the whole section */
-    padding: 0 5%;         /* small side breathing space */
+    gap: 80px;
+    padding: 80px 6%;
+    width: 100%;
+    box-sizing: border-box;   /* prevents overflow */
     align-items: flex-start;
 }
 
 /* LEFT SIDE - WORKING PAPERS */
 .working-left {
-    flex: 1.4;
+    flex: 1;
 }
 
 .working-left h2 {
@@ -162,8 +162,7 @@ nav a:hover {
 
 /* RIGHT SIDE - EDUCATION */
 .education-right {
-    flex: 1;
-    max-width: 420px;   /* prevents it from stretching too much */
+    flex: 0 0 420px;   /* fixed width */
 }
 
 .education-card {
