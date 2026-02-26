@@ -121,10 +121,11 @@ nav a:hover {
 
 .content-wrapper {
     display: flex;
-    justify-content: space-between;   /* pushes left & right apart */
-    gap: 80px;
-    width: 100%;
-    padding: 80px 8%;
+    justify-content: space-between;
+    gap: 70px;
+    max-width: 1200px;     /* keeps layout centered */
+    margin: 80px auto;     /* centers the whole section */
+    padding: 0 5%;         /* small side breathing space */
     align-items: flex-start;
 }
 
@@ -162,8 +163,7 @@ nav a:hover {
 /* RIGHT SIDE - EDUCATION */
 .education-right {
     flex: 1;
-    display: flex;
-    justify-content: flex-end;   /* pushes card to right edge */
+    max-width: 420px;   /* prevents it from stretching too much */
 }
 
 .education-card {
