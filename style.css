@@ -317,3 +317,24 @@ nav a:hover {
     background: #1e2a47;
     font-size: 13px;
 }
+
+/* Social Icons */
+.contact-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-right: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.contact-social a:hover {
+    background: #1abc9c;
+    transform: translateY(-3px);
+}
