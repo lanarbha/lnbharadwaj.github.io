@@ -212,3 +212,8 @@ nav a:hover {
     font-size: 14px;
     color: #555;
 }
+
+/* Align Conferences with Working Papers */
+#conferences {
+    padding: 80px 6%;
+}
