@@ -224,7 +224,7 @@ nav a:hover {
 ========================== */
 
 .contact-section {
-    background: linear-gradient(135deg, #0f1c3f, #0a1229);
+    background: linear-gradient(135deg, #1e2a47, #283b73);
     color: white;
     padding-top: 80px;
 }
@@ -314,6 +314,6 @@ nav a:hover {
 .footer-bottom {
     text-align: center;
     padding: 20px 0;
-    background: #081026;
+    background: #283b73;
     font-size: 13px;
 }
