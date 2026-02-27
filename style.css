@@ -394,11 +394,11 @@ nav a:hover {
 
 .cv-link a {
     font-weight: 600;
-    color: #ffffff;
+    color: #1abc9c;   /* green permanently */
     text-decoration: underline;
     transition: 0.3s ease;
 }
 
 .cv-link a:hover {
-    color: #1abc9c;
+    opacity: 0.8;   /* subtle hover effect instead */
 }
