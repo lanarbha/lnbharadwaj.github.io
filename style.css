@@ -391,3 +391,14 @@ nav a:hover {
     font-size: 14px;
     color: #444;
 }
+
+.cv-link a {
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: underline;
+    transition: 0.3s ease;
+}
+
+.cv-link a:hover {
+    color: #1abc9c;
+}
