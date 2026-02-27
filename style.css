@@ -283,42 +283,50 @@ nav a:hover {
 
 /* RIGHT SIDE FORM */
 .contact-form {
+    flex: 0 0 480px;
     background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .contact-form h3 {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    color: #1e2a47;
 }
 
-..contact-form input,
+.contact-form form {
+    display: block;
+}
+
+.contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 14px;
+    margin-bottom: 20px;
     border: 1px solid #ddd;
-    background: #f4f6f9;
+    background: #f8f9fc;
     color: #1e2a47;
-    border-radius: 6px;
+    border-radius: 8px;
+    font-size: 14px;
     font-family: inherit;
 }
 
 .contact-form textarea {
-    height: 120px;
+    height: 140px;
     resize: vertical;
 }
 
 .contact-form button {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     border: none;
     background: #1abc9c;
     color: white;
     font-weight: 600;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .contact-form button:hover {
@@ -335,6 +343,10 @@ nav a:hover {
 }
 
 /* Social Icons */
+.contact-social {
+    margin-top: 25px;
+}
+
 .contact-social a {
     display: inline-flex;
     align-items: center;
@@ -343,8 +355,8 @@ nav a:hover {
     height: 42px;
     margin-right: 12px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.08);
-    color: white;
+    background: #1e2a47;   /* your original dark blue */
+    color: white;          /* white icon */
     font-size: 18px;
     transition: all 0.3s ease;
     text-decoration: none;
@@ -366,12 +378,12 @@ nav a:hover {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: #e8edf5;
+    background: #1e2a47;  /* same blue */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    color: #1e2a47;
+    color: white;         /* white icon */
 }
 
 .info-item p {
