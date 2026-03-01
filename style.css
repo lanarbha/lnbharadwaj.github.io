@@ -402,3 +402,13 @@ nav a:hover {
 .cv-link a:hover {
     opacity: 0.8;   /* subtle hover effect instead */
 }
+
+/* Remove underline from site name */
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo a:hover {
+    cursor: pointer;
+}
