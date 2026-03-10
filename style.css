@@ -307,6 +307,7 @@ nav a:hover {
     border-radius: 8px;
     font-size: 14px;
     font-family: inherit;
+    box-sizing: border-box;
 }
 
 .contact-form textarea {
