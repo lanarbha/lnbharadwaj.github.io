@@ -425,7 +425,10 @@ nav ul {
 .contact-form {
     width: 100%;
     flex: none;
-    padding: 30px;
+    padding: 25px;
 }
 
+.contact-form textarea {
+    height: 100px;
+}
 }
