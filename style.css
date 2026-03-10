@@ -84,7 +84,7 @@ nav a:hover {
 .hero {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 80px 10%;
     background: linear-gradient(135deg, #1e2a47, #283b73);
     color: white;
