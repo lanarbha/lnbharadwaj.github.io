@@ -1,15 +1,9 @@
-/* Improve rendering performance */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
+/* RESET + BASE */
 
 * {
     box-sizing: border-box;
 }
 
-/* Make footer stick to bottom */
 html, body {
     height: 100%;
     margin: 0;
@@ -24,10 +18,14 @@ body {
     overflow-x: hidden;
 }
 
-.page-section,
-.hero,
-.contact-section {
+main {
     flex: 1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* GENERAL */
@@ -74,6 +72,15 @@ header {
     color: #1e2a47;
 }
 
+/* FIXED: remove underline in all states */
+.logo a,
+.logo a:visited,
+.logo a:hover,
+.logo a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -103,7 +110,6 @@ nav a:hover {
     background: linear-gradient(135deg, #1e2a47, #283b73);
     color: white;
     gap: 60px;
-    flex-wrap: nowrap;
 }
 
 .hero-content {
@@ -145,7 +151,8 @@ nav a:hover {
     height: 130px;
     object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 18px;
+    margin: 0 auto 18px auto;
+    display: block;
 }
 
 .profile-card p {
@@ -153,7 +160,22 @@ nav a:hover {
     line-height: 1.6;
 }
 
-/* WORKING PAPERS + EDUCATION */
+/* CV LINK (FIXED COLOR ISSUE) */
+
+.cv-link a,
+.cv-link a:visited,
+.cv-link a:active {
+    font-weight: 600;
+    color: #1abc9c;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.cv-link a:hover {
+    color: #16a085;
+}
+
+/* CONTENT LAYOUT */
 
 .content-wrapper {
     display: flex;
@@ -173,6 +195,8 @@ nav a:hover {
     font-size: 22px;
 }
 
+/* PAPERS */
+
 .paper-item {
     border-left: 3px solid #1e2a47;
     padding-left: 18px;
@@ -189,6 +213,8 @@ nav a:hover {
     color: #444;
     margin-bottom: 6px;
 }
+
+/* EDUCATION */
 
 .education-right {
     max-width: 700px;
@@ -221,7 +247,7 @@ nav a:hover {
     color: #555;
 }
 
-/* CONTACT SECTION */
+/* CONTACT */
 
 .contact-section {
     background: #f5f7fb;
@@ -303,12 +329,29 @@ nav a:hover {
 
 @media (max-width: 768px) {
 
+header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+nav ul {
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
 .hero {
     flex-direction: column;
+    gap: 40px;
+    padding: 60px 20px;
 }
 
 .hero-content {
     order: 1;
+}
+
+.hero h1 {
+    font-size: 28px;
 }
 
 .profile-card {
@@ -321,5 +364,12 @@ nav a:hover {
 .content-wrapper,
 .contact-container {
     flex-direction: column;
+    gap: 40px;
+    padding: 60px 8%;
+}
+
+.contact-form {
+    width: 100%;
+    padding: 25px;
 }
 }
