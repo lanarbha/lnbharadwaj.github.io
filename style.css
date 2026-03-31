@@ -1,3 +1,10 @@
+/* Improve rendering performance */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -11,8 +18,8 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.7;
     color: #222;
     overflow-x: hidden;
 }
@@ -27,6 +34,7 @@ body {
 
 h1, h2, h3 {
     margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .section {
@@ -78,6 +86,7 @@ nav a {
     text-decoration: none;
     color: #1e2a47;
     font-weight: 500;
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
@@ -103,6 +112,10 @@ nav a:hover {
     order: 2;
 }
 
+.hero-content p {
+    margin-bottom: 15px;
+}
+
 .hero h1 {
     font-size: 36px;
     margin-bottom: 20px;
@@ -121,9 +134,9 @@ nav a:hover {
     background: white;
     color: #1e2a47;
     padding: 30px 25px;
-    border-radius: 14px;
+    border-radius: 10px;
     text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     order: 1;
 }
 
@@ -148,7 +161,6 @@ nav a:hover {
     gap: 80px;
     padding: 80px 6%;
     width: 100%;
-    box-sizing: border-box;
     align-items: flex-start;
 }
 
@@ -158,7 +170,6 @@ nav a:hover {
 
 .working-left h2 {
     margin-bottom: 30px;
-    font-weight: 600;
     font-size: 22px;
 }
 
@@ -170,15 +181,13 @@ nav a:hover {
 
 .paper-item h4 {
     font-size: 16px;
-    font-weight: 600;
     margin-bottom: 6px;
 }
 
 .paper-item p {
     font-size: 13px;
     color: #444;
-    line-height: 1.6;
-    margin: 0;
+    margin-bottom: 6px;
 }
 
 .education-right {
@@ -193,7 +202,6 @@ nav a:hover {
 
 .education-card h2 {
     margin-bottom: 25px;
-    font-weight: 600;
     font-size: 22px;
 }
 
@@ -201,43 +209,22 @@ nav a:hover {
     margin-bottom: 28px;
 }
 
-.edu-item:last-child {
-    margin-bottom: 0;
-}
-
 .edu-degree {
     font-weight: 600;
     font-size: 16px;
-    margin-bottom: 4px;
 }
 
-.edu-institution {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 4px;
-}
-
-.edu-cgpa {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 3px;
-}
-
+.edu-institution,
+.edu-cgpa,
 .edu-thesis {
     font-size: 14px;
     color: #555;
-}
-
-#conferences .content-wrapper {
-    padding-top: 60px;
-    padding-bottom: 80px;
 }
 
 /* CONTACT SECTION */
 
 .contact-section {
     background: #f5f7fb;
-    color: #1e2a47;
     padding: 80px 0;
 }
 
@@ -246,26 +233,12 @@ nav a:hover {
     justify-content: space-between;
     gap: 80px;
     padding: 0 6% 80px 6%;
-    align-items: flex-start;
     flex-wrap: wrap;
-}
-
-.contact-left {
-    flex: 1;
 }
 
 .contact-left h2 {
     font-size: 26px;
     margin-bottom: 25px;
-}
-
-.contact-info p {
-    margin-bottom: 12px;
-    font-size: 14px;
-}
-
-.contact-social {
-    margin-top: 25px;
 }
 
 .contact-links {
@@ -291,13 +264,8 @@ nav a:hover {
     flex: 0 0 480px;
     background: white;
     padding: 40px;
-    border-radius: 14px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-.contact-form h3 {
-    margin-bottom: 25px;
-    color: #1e2a47;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .contact-form input,
@@ -307,16 +275,7 @@ nav a:hover {
     margin-bottom: 20px;
     border: 1px solid #ddd;
     background: #f8f9fc;
-    color: #1e2a47;
     border-radius: 8px;
-    font-size: 14px;
-    font-family: inherit;
-    box-sizing: border-box;
-}
-
-.contact-form textarea {
-    height: 140px;
-    resize: vertical;
 }
 
 .contact-form button {
@@ -330,6 +289,8 @@ nav a:hover {
     cursor: pointer;
 }
 
+/* FOOTER */
+
 .footer-bottom {
     background: #1e2a47;
     color: white;
@@ -338,110 +299,27 @@ nav a:hover {
     font-size: 14px;
 }
 
-/* INFO ITEMS */
-
-.info-item {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    margin-bottom: 25px;
-}
-
-.info-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: #1e2a47;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    color: white;
-}
-
-.info-item p {
-    margin: 3px 0 0 0;
-    font-size: 14px;
-    color: #444;
-}
-
-.cv-link a {
-    font-weight: 600;
-    color: #1abc9c;
-    text-decoration: underline;
-}
-
-.logo a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* ===============================
-   MOBILE RESPONSIVE (IMPORTANT)
-================================ */
+/* MOBILE */
 
 @media (max-width: 768px) {
 
-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-nav ul {
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
 .hero {
     flex-direction: column;
-    gap: 40px;
-    padding: 60px 20px;
 }
 
-.hero h1 {
-    font-size: 28px;
+.hero-content {
+    order: 1;
 }
 
 .profile-card {
-    flex: none;
+    order: 2;
     width: 100%;
     max-width: 320px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto;
 }
 
-.content-wrapper {
-    flex-direction: column;
-    gap: 40px;
-    padding: 60px 8%;
-}
-
-.education-right {
-    width: 100%;
-    flex: none;
-}
-
+.content-wrapper,
 .contact-container {
     flex-direction: column;
-    gap: 40px;
-    padding: 0 20px 60px 20px;
-}
-
-.contact-form {
-    flex: none;
-    width: 100%;
-    max-width: 100%;
-    padding: 25px;
-    box-sizing: border-box;
-}
-
-    .contact-section {
-    padding: 60px 0;
-}
-    
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    box-sizing: border-box;
 }
 }
