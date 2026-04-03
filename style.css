@@ -13,6 +13,7 @@ body {
   flex-direction: column;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   line-height: 1.7;
+  background: #f5f7fb;
   color: #222;
   overflow-x: hidden;
 }
@@ -69,7 +70,7 @@ header {
   color: #1e2a47;
 }
 
-/* FIXED: remove underline in all states */
+
 .logo a,
 .logo a:visited,
 .logo a:hover,
@@ -212,7 +213,7 @@ nav a:hover {
 }
 
 .education-card {
-  background: #f4f6f9;
+  background: #f5f7fb;
   padding: 28px 32px;
   border-radius: 10px;
 }
