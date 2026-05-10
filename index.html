@@ -2,15 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Lakhi Narayan Bharadwaj | Home </title>
+  <title>Lakhi Narayan Bharadwaj | Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Lakhi Narayan Bharadwaj, PhD candidate in Economics at IIT Guwahati. Research in labor economics, technological change, and development economics.">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- 1. Preload LCP image FIRST (highest priority) -->
+  <link rel="preload" as="image" href="profile.webp" fetchpriority="high">
+
+  <!-- 2. Non-blocking CSS (fixes render-blocking) -->
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
 </head>
 <body>
-
   <!-- HEADER -->
   <header>
     <div class="logo">
@@ -28,7 +34,6 @@
 
   <!-- MAIN CONTENT -->
   <main>
-
     <!-- HERO SECTION -->
     <section class="hero">
       <div class="hero-content">
@@ -55,7 +60,21 @@
         </p>
       </div>
       <div class="profile-card">
-        <img src="profile.webp" alt="Lakhi Narayan Bharadwaj" loading="lazy">
+        <!--
+          ⚠️ ACTION REQUIRED before uploading:
+          Resize profile.webp to 260×260px in squoosh.app
+          - Format: WebP, Quality: 75, Resize: 260×260
+          - Target: under 15KB
+        -->
+        <img
+          src="profile.webp"
+          alt="Lakhi Narayan Bharadwaj"
+          width="130"
+          height="130"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        >
         <h3>Lakhi Narayan Bharadwaj</h3>
         <p>Ph.D. Candidate, Economics</p>
         <p>Indian Institute of Technology Guwahati</p>
@@ -73,18 +92,14 @@
               <div class="edu-institution">
                 Indian Institute of Technology Guwahati · 2020–Present
               </div>
-              <div class="edu-cgpa">
-                CGPA: 9.08
-              </div>
+              <div class="edu-cgpa">CGPA: 9.08</div>
             </div>
             <div class="edu-item">
               <div class="edu-degree">M.Phil. in Economics</div>
               <div class="edu-institution">
                 Dibrugarh University · 2019–2020
               </div>
-              <div class="edu-cgpa">
-                CGPA: 8
-              </div>
+              <div class="edu-cgpa">CGPA: 8</div>
               <div class="edu-thesis">
                 Dissertation: Infrastructure Development and Economic Growth: Evidence from North East India
               </div>
@@ -94,21 +109,17 @@
               <div class="edu-institution">
                 Dibrugarh University · 2016–2018
               </div>
-              <div class="edu-cgpa">
-                CGPA: 8.11
-              </div>
+              <div class="edu-cgpa">CGPA: 8.11</div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- FOOTER -->
   <div class="footer-bottom">
     © 2026 Lakhi Narayan Bharadwaj. All rights reserved.
   </div>
-
 </body>
 </html>
